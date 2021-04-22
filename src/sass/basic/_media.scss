@@ -148,7 +148,120 @@
             font-size: 16px;
             text-align: center;
             line-height: 25px;
-            margin-right: 0px;
+            width: 100%;
+        }
+    }
+    .feed-form {
+        margin: 0 auto;
+        margin-top: 36px;
+    }
+    .button {
+        &_submit {
+            display: block;
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 250px;
+        }
+    }
+    .carousel {
+        .tns-item {
+            img {
+                width: 400px;
+            }
+        }
+        .prev, .next {
+            img {
+                width: 20px;
+                height: 35px;
+            }
+        }
+        .prev {
+            left: -10px;
+        }
+        .next {
+            right: -15px;
+        }
+    }
+    .catalog {
+        &__tab {
+            width: 140px;
+            height: 35px;
+            font-size: 12px;
+            line-height: 35px;
+        }
+        &__content {
+            flex-direction: column;
+            align-items: center;
+        }
+        &-item {
+            width: 230px;
+            height: 100%;
+            &__img {
+                height: 150px;
+            }
+            &__subtitle {
+                font-size: 14px;
+            }
+            &__descr {
+                font-size: 12px;
+                width: 170px;
+            }
+            &__link {
+                font-size: 12px;
+            }
+            &__wrapper {
+                height: 300px;
+            }
+            hr {
+                width: 183px;
+            }
+            &__list {
+                li {
+                    font-size: 12px;
+                    margin-bottom: 10px;
+                }
+            }
+            &__back {
+                margin-top: 40px;
+                font-size: 12px;
+            }
+            &__old-price {
+                font-size: 12px;
+                line-height: 10px;
+            }
+            &__price {
+                font-size: 14px;
+            }
+        }
+    }
+    .button {
+        &_mini {
+            width: 90px;
+            height: 30px;
+            font-size: 12px;
+        }
+    }
+    .advantages {
+        &__title {
+            font-size: 20px;
+        }
+    }
+    .reviews {
+        &-item {
+            &__photo {
+                width: 90px;
+                height: 90px;
+                img {
+                    width: 90px;
+                    height: 90px; 
+                }
+            }
+            &__subtitle {
+                font-size: 16px;
+            }
+            &__descr {
+                font-size: 12px;
+            }
         }
     }
 }
@@ -196,7 +309,9 @@
         }
     }
     .button {
-        display: none;
+        &_promo {
+            display: none;
+        }
         &_sub {
             display: block;
             width: 100px;
@@ -224,6 +339,49 @@
         }
         &__content__title {
             margin-top: 15px;
+        }
+    }
+    .consultation {
+        min-height: 400px;
+        &__title {
+            font-size: 14px;
+        }
+        &__descr {
+            display: none;
+        }
+    }
+    .feed-form {
+        width: 200px;
+    }
+    .button {
+        &_submit {
+            width: 200px;
+            font-size: 10px;
+        }
+    }
+    .carousel {
+        .tns-item {
+            img {
+                width: 250px;
+            }
+        }
+        .prev, .next {
+            img {
+                width: 15px;
+                height: 26px;
+            }
+        }
+        .prev {
+            left: 0;
+        }
+        .next {
+            right: 0;
+        }
+    }
+    .catalog {
+        &__tab {
+            width: 90px;
+            font-size: 9px;
         }
     }
 }
