@@ -33,4 +33,9 @@ $(document).ready(function(){
 
   toggleSlide('.catalog-item__link');
   toggleSlide('.catalog-item__back');
+
+  $(".reviews-item__hidden-link").click(function(){
+    $(".reviews-item__hidden-descr").fadeIn();
+    $(".reviews-item__hidden-link").fadeOut();
+  });
 });

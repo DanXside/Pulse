@@ -261,7 +261,37 @@
             }
             &__descr {
                 font-size: 12px;
+                span {
+                    display: none;
+                }
             }
+            &__hidden-link {
+                display: block;
+            }
+        }
+    }
+    .footer {
+        &__info {
+            width: 300px;
+            height: 200px;
+        }
+        &__address {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        &__phone {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        &__social-item {
+            width: 24px;
+            height: 24px;
+            img {
+                width: 100%;
+            }
+        }
+        &__social {
+            margin-top: 15px;
         }
     }
 }
@@ -287,6 +317,7 @@
             flex-direction: column;
             align-items: center;
             margin-top: 20px;
+            width: 320px;
         }
         &__icon {
             font-size: 10px;
@@ -382,6 +413,14 @@
         &__tab {
             width: 90px;
             font-size: 9px;
+        }
+    }
+    .footer {
+        height: 400px;
+        &__info {
+            width: 250px;
+            height: 200px;
+            padding: 40px 18px 15px 18px;
         }
     }
 }
