@@ -56,4 +56,63 @@ $(document).ready(function(){
     });
   });
 
+  function valideForms(form){
+    $(form).validate({
+      rules: {
+        name: "required",
+        phone: "required",
+        email: {
+          required: true,
+          email: true
+        }
+      },
+      messages: {
+        name: "Пожалуйста, введите своё имя",
+        phone: "Пожалуйста, введите свой номер",
+        email: {
+          required: "Пожалуйста, введите свою почту",
+          email: "Неправильно введён адрес почты"
+        }
+      }
+    });
+  };
+
+  valideForms('#consultation form');
+  valideForms('#order form');
+  valideForms('#consultation-form');
+
+  $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+  $('form').submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      type: "POST",
+      url: "mailer/smart.php",
+      data: $(this).serialize()
+    }).done(function() {
+      $(this).find("input").val("");
+      $('#consultation, #order').fadeOut();
+      $('.overlay, #thanks').fadeIn('slow');
+      $('form').trigger('reset');
+    });
+    return false;
+  });
+
+  // Smooth scroll and page up
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 1600) {
+      $('.pageup').fadeIn();
+    } else {
+      $('.pageup').fadeOut();
+    }
+  });
+
+  $("a[href=#up]").click(function(){
+    const _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+    return false;
+  });
+
+  new WOW().init();
 });

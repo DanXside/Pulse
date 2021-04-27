@@ -20,4 +20,13 @@
         left: 0;
         margin-right: 0px;
     }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        color: #fff;
+        border: none;
+        margin-bottom: 10px;
+        text-align: center;
+    }
 }

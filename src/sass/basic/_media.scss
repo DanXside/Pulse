@@ -423,4 +423,33 @@
             padding: 40px 18px 15px 18px;
         }
     }
+    .modal {
+        width: 250px;
+        min-height: 300px;
+        padding: 18px 20px 20px 20px;
+        &__close {
+            font-size: 26px;
+            right: -26px;
+        }
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__descr {
+            font-size: 12px;
+        }
+    }
+    .feed-form {
+        input {
+            height: 40px;
+        }
+        &_modal {
+            margin-top: 20px;
+        }
+    }
+    .pageup {
+        right: 20px;
+        bottom: 20px;
+        width: 30px;
+        height: 30px;
+    }
 }
